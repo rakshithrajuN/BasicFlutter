@@ -1,5 +1,6 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-class Constants{
-   
+class Constants {
+ static SharedPreferences prefs;
+
 }

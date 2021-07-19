@@ -2,9 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_tutorial/drawer.dart';
-import 'package:flutter_tutorial/utils/Constants.dart';
+import 'package:flutter_tutorial/utilies/Constants.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+
+import 'package:shared_preferences/shared_preferences.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -37,11 +39,12 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text("Awesome App"),
         actions: [
-          IconButton(onPressed:(){
-
-            Constants.prefs.setBool("Logged In", false);
-            Navigator.pushReplacementNamed(context, '/login');
-          } , icon: Icon(Icons.logout))
+          IconButton(
+              icon: Icon(Icons.logout),
+              onPressed: () {
+                Constants.prefs.setBool("loggedIn", false);
+                Navigator.pushReplacementNamed(context, "/login");
+              })
         ],
       ),
       body: Padding(

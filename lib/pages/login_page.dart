@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tutorial/BgImg.dart';
 import 'package:flutter_tutorial/pages/home_page.dart';
-import 'package:flutter_tutorial/utils/Constants.dart';
+import 'package:flutter_tutorial/utilies/Constants.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({ Key? key }) : super(key: key);
